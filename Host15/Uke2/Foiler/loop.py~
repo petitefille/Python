@@ -1,0 +1,8 @@
+degrees = [0, 10, 20, 40, 100]
+for C in degrees:
+    print 'Celsius degrees:', C
+    F = 9/5.*C + 32
+    print 'Fahrenheit:', F
+print 'The degrees list has', len(degrees), 'elements'
+
+

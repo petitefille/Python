@@ -1,0 +1,17 @@
+import ODESolver
+from scitools.std import *
+
+def f(u,t):
+   S, I, R = u
+   v = 0.1
+   return [-B*S*I, B*S*I - v*I, v*I]
+B = 0.0005
+U0 = [1500, 1, 0]
+T = 60; dt = 0.5; n = int(round(T/dt))
+solver = ODESolver.ForwardEuler(f)
+solver.set_initial_condition(U0)
+
+
+u, t = solver.solve(linspace(0, T, n+1))
+plot(t, u)
+show()

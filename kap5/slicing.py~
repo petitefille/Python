@@ -1,0 +1,16 @@
+# w = [0, 0.1, 0.2, 0.3, ..., 3]
+# From list comprehension to array
+w = [0.1*i for i in range(31)] # list
+#print w
+import numpy as np
+w = np.array(w)
+
+# linspace
+w = np.linspace(0, 3, 31)
+
+# slicing: w[3:8:2]= [w[3], w[5], w[7]]
+print w[:]   # the entire w
+print w[:-2] # w[0], ..., w[28]
+print w[::5] # w[0], w[5], w[10], ...w[30]
+print w[2:-2:6] # w[2], w[8], w[14], ...w[28]
+print w[-1::-1]

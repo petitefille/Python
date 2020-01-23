@@ -1,0 +1,8 @@
+def print_string(name):
+    print 'var'
+
+var = Anita
+
+print_string(var)    
+
+   

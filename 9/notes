@@ -1,0 +1,15 @@
+lass (Parabola):
+      def __init__(self, c0, c1, c2, c3, c4):
+         Parabola.__init__(self, c0, c1, c2)
+         self.c3 = c3
+         self.c4 = c4
+      
+      def __call__(self, x):
+         return Line.__call__(self,x) + self.c2*x**2 + self.c3*x**3 + self.c4*x**4
+         
+         
+if __name__ == '__main__':
+    p = Cubic(1, -2, 2, 3,-3)
+    p1 = p(x=2.5)
+    print p1
+    print p.table(0, 1, 3)
